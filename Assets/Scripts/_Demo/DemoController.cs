@@ -67,11 +67,17 @@ namespace Demo
 		{
 			if (_DoSequence)
 			{
-				Player._Instance.Pause(PauseType.Paused, false);
-				Player._Instance._UIController.FadeOutUI(0.0f);
-				Player._Instance.SetModelVisibility(false);
+                Player._Instance.SetModelVisibility(true);
+                Player._Instance.Pause(PauseType.Unpaused);
+                _DayTimeManager.enabled = true;
 
-				StartCoroutine(IE_StartScene());
+                //Player._Instance.Pause(PauseType.Paused, false);
+				//Player._Instance._UIController.FadeOutUI(0.0f);
+				//Player._Instance.SetModelVisibility(false);
+
+				//StartCoroutine(IE_StartScene());
+
+
 			}
 			else if (_IsTutorialDay)
 			{
