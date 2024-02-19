@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 public static class OnionManager
 {
@@ -13,4 +15,13 @@ public static class OnionManager
 
 		return o != null ? o : _OnionsInScene.FirstOrDefault(x => x.OnionActive);
 	}
+
+    public static Onion CreateOnion(Vector3 position, GameObject OnionPrefab)
+	{
+		Onion newOnion = GameObject.Instantiate<GameObject>(OnionPrefab).GetComponent<Onion>();
+
+		newOnion.transform.position = position;
+
+		return newOnion;
+    }
 }

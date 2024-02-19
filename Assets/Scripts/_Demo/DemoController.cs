@@ -71,6 +71,7 @@ namespace Demo
                 Player._Instance.Pause(PauseType.Unpaused);
                 _DayTimeManager.enabled = true;
 
+
                 //Player._Instance.Pause(PauseType.Paused, false);
 				//Player._Instance._UIController.FadeOutUI(0.0f);
 				//Player._Instance.SetModelVisibility(false);
